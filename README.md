@@ -24,55 +24,32 @@ INSERT REPO TREE IMAGE HERE
 
 ### Section 3: Reproduction Steps  
 
-##### **1. Set Up the Environment**  
+##### **1. Set Up the Environment and Load Dataset**  
 - Within the SCRIPTS folder, locate 'INSERT ANALYSIS SCRIPT NAME HERE' to perform the analysis (the following instructions are performed with this script).
 - The original data set can be downloaded from the UN Sustainable Goals Website: [https://www.kaggle.com/datasets/cammyc/nfl-twitter-sentiment-analysis/data](https://unstats-undesa.opendata.arcgis.com/datasets/undesa::indicator-3-5-2-alcohol-consumption-per-capita-aged-15-years-and-older-within-a-calendar-year-litres-of-pure-alcohol/about). The dataset is called **Alcohol consumption per capita (aged 15 years and older) within a calendar year (litres of pure alcohol)**
 - To conduct the analysis, you will want to use a cleaned version of the dataset. Within the DATA folder, locate the 'long_dat.csv' dataset. This is the dataset that will be used to conduct the analysis. 
 - Install necessary Python libraries: LIST LIBRARIES HERE 
 
-##### **2. Load the Dataset**  
-- Ensure the dataset file (CSV) is in the working directory.  
-- Load the 'long_dat.csv' dataset into your python environment. 
+##### **2. Preprocess Data**:  
+   - Convert date columns to a proper datetime format.  
+   - Filter data to include only the selected continent (Africa, Asia, or Europe).  
+   - Handle missing values by forward-filling or removing incomplete records.  
+   - Aggregate data if necessary (e.g., by year or month).  
 
-##### **3. Preprocess the Data** CHANGE
-- Remove invalid entries, such as missing team names or incorrect sentiment labels.  
-- Convert timestamps to a datetime objects for easier filtering.
-  - Find the earliest and latest tweets within the dataset.
-  - Create a histogram to see the frequency of tweets over time.
-  - Create a dataframe of tweets occurring between Nov 29, 2024- Nov 30, 2024 called 'filtered_df'.
-- Filter tweets posted up to three days before each team's game.  
-  - Create a list of games from week 13 of the NFL season.
-  - Create a dictionary.
-  - Loop through original dataframe 'df' to assign each team a game result label:
-    - **1** if the team won  
-    - **0** if the team lost
-  - Save into a new dataframe 'new_df', then convert into a csv file (cleaned data).
+##### **3. Visualize Trends**:  
+   - Plot alcohol consumption over time to identify trends, seasonality, and potential outliers.  
+   - Use decomposition methods to separate trend and seasonal components if applicable.  
 
-##### **4. Aggregate Pre-Game Sentiment**  CHANGE
--  Import the defaultdict class from the collections module in Python.
--  Createa dataframe for aggregated sentiments per team and map sentiment labels to numerical values:
-   - Positive → +1
-   - Neutral → 0
-   - Negative → -1
-- Obtain the average fan sentiment score per team.
+##### **4. Train Forecasting Model**:  
+   - Split the data into training and testing sets.  
+   - Select an appropriate time series forecasting model (e.g., ARIMA, Exponential Smoothing, or LSTM).  
+   - Tune hyperparameters and validate model performance using cross-validation.  
 
-##### **5. Merge with Game Results**  CHANGE
-- Merge the computed average sentiment scores with the game results for each team using a for loop.
-- View the aggregated data to ensure it contains the following variables: team, average_sentiment, and won (indicates team win/loss).
+##### **5. Generate Predictions**:  
+   - Apply the trained model to predict future alcohol consumption.  
+   - Compare predictions with test data and compute error metrics (e.g., RMSE, MAE).  
 
-##### **6. Fit Logistic Regression Model**  CHANGE
-- Use logistic regression to analyze the relationship between a team's pre-game sentiment and their game outcome.  
-- Train the model using average sentiment scores as the independent variable and game outcomes as the dependent variable.  
-
-##### **7. Statistical Significance Test (Wald Test)**  CHANGE
-- Use the Wald test to determine if fan sentiment has a statistically significant effect on game outcomes.  
-- Extract the p-value from the test.  
-- If the p-value is less than 0.05, reject the null hypothesis, indicating a significant relationship.  
-
-##### **8. Visualize Findings**  CHANGE
-- Generate bar plots to compare the average sentiment for each team before their game and average sentiment overall by match outcomes.
-- Optional: within 'sentiment_graphs.ipynb' in the SCRIPTS folder, create a histogram to visualize the overall distribution of sentiment scores.  
-
-##### **9. Interpretation of Results**  CHANGE
-- If the p-value is below 0.05, conclude that fan sentiment before a game is significantly related to the game’s outcome.  
-- If the p-value is above 0.05, conclude that pre-game sentiment does not significantly predict game results. 
+##### **6. Interpret Results**:  
+   - Assess model accuracy by comparing predicted vs. actual values.  
+   - Identify key patterns or anomalies in the forecast.  
+   - Discuss potential factors influencing trends (e.g., economic conditions, policy changes).  
