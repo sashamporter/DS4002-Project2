@@ -33,24 +33,24 @@ INSERT REPO TREE IMAGE HERE
 - Sort data by continent and year to ensure correct time series order.  
 
 ##### **2. Loop Through Each Continent**  
-   - Extracts time series data for each continent.  
-   - Splits the data into training (≤2015) and testing (2019).  
+   - Extract time series data for each continent.  
+   - Split the data into training (≤2015) and testing (2019).  
 
 ##### **3. Check Stationarity & Select ARIMA Model**  
-   - Performs an Augmented Dickey-Fuller (ADF) test to check if the time series is stationary.  
-   - Uses `auto_arima()` to determine the best ARIMA model parameters based on AIC.  
+   - Perform an Augmented Dickey-Fuller (ADF) test to check if the time series is stationary.  
+   - Use `auto_arima()` to determine the best ARIMA model parameters based on AIC.  
 
 ##### **4. Fit and Forecast**  
-   - Fits the selected ARIMA model using training data.  
-   - Forecasts alcohol consumption for 2019.  
+   - Fit the selected ARIMA model using training data.  
+   - Forecast alcohol consumption for 2019.  
 
 ##### **5. Store and Analyze Results**  
-   - Saves actual vs. predicted values, model order, residuals, AIC, Ljung-Box test results, and stationarity p-values.  
-   - Generates diagnostic plots:  
+   - Save actual vs. predicted values, model order, residuals, AIC, Ljung-Box test results, and stationarity p-values.  
+   - Generate diagnostic plots:  
      - Time series plot with actual and predicted values.  
      - Q-Q plot to assess residual normality.  
 
 ##### **6. Evaluate Model Performance**  
-   - Computes Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE) for each continent.  
-   - Averages performance metrics across all continents to determine success.  
+   - Compute Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE) for each continent.  
+   - Average performance metrics across all continents to determine success.  
    - If average MAE is ≤0.5, the model is considered successful.
