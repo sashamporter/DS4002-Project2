@@ -13,6 +13,7 @@ For this project, we used python as the primary language for conducting our anal
 
 ***Packages***:
 R Packages used: dplyr and ggplot2 
+
 Python Packages used: 
 
 ***Platform***: 
@@ -25,14 +26,13 @@ INSERT REPO TREE IMAGE HERE
 
 ##### **1. Set Up the Environment**  
 - Within the SCRIPTS folder, locate 'INSERT ANALYSIS SCRIPT NAME HERE' to perform the analysis (the following instructions are performed with this script).
-- Within the DATA folder, locate the 'long_dat.csv' dataset. This is the dataset that will be used to conduct the analysis 
+- The original data set can be downloaded from the UN Sustainable Goals Website: [https://www.kaggle.com/datasets/cammyc/nfl-twitter-sentiment-analysis/data](https://unstats-undesa.opendata.arcgis.com/datasets/undesa::indicator-3-5-2-alcohol-consumption-per-capita-aged-15-years-and-older-within-a-calendar-year-litres-of-pure-alcohol/about). The dataset is called **Alcohol consumption per capita (aged 15 years and older) within a calendar year (litres of pure alcohol)**
+- To conduct the analysis, you will want to use a cleaned version of the dataset. Within the DATA folder, locate the 'long_dat.csv' dataset. This is the dataset that will be used to conduct the analysis. 
 - Install necessary Python libraries: LIST LIBRARIES HERE 
 
 ##### **2. Load the Dataset**  
-- Download the **Alcohol consumption per capita (aged 15 years and older) within a calendar year (litres of pure alcohol)** dataset from the UN Sustainable Goals Website: [https://www.kaggle.com/datasets/cammyc/nfl-twitter-sentiment-analysis/data](https://unstats-undesa.opendata.arcgis.com/datasets/undesa::indicator-3-5-2-alcohol-consumption-per-capita-aged-15-years-and-older-within-a-calendar-year-litres-of-pure-alcohol/about)
 - Ensure the dataset file (CSV) is in the working directory.  
 - Load the 'long_dat.csv' dataset into your python environment. 
-- Check the properties to get a sense of the data (e.g., df.head() ).
 
 ##### **3. Preprocess the Data** CHANGE
 - Remove invalid entries, such as missing team names or incorrect sentiment labels.  
