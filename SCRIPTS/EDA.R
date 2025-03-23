@@ -144,14 +144,27 @@ long_dat <- data.frame(
   "Alc" = alc_total # represents avg alcohol intake
   ) 
 
-# c.) create visualization
+# c.) create visualizations
+# bar plot
 ggplot(long_dat, aes(x = Year, y = Alc, fill = Continent)) +
   geom_bar(stat = "identity", position = "dodge", alpha = 0.7) +  
+  scale_fill_manual(values = c("Africa" = "#D81B60", "Asia" = "#FFC107", "Eurpe" = "#1E88E5")) + 
   labs(title = "Average Alcohol Consumption by Continent From 2000-2019",
-       x = "Year", y = "Average Alcohol Consumption (liters)") +
+       x = "Year", y = "Average Alcohol Consumption (L)") +
+  theme_minimal() 
+
+# line plot
+ggplot(long_dat, aes(x = Year, y = Alc, linetype = Continent, color = Continent, group = Continent)) +
+  geom_line(size = .9) +  
+  geom_point(size = 3) +
+  labs(title = "Alcohol Consumption Trend by Continent From 2000-2019", 
+       x = "Year", y = "Alcohol Consumption (L)") +
   theme_minimal() +
-  scale_fill_brewer(palette = "")
+  scale_y_continuous(breaks = seq(0, 20, by = 2), limits = c(0,12)) +
+  scale_color_manual(values = c("Africa" = "#D81B60", "Asia" = "#FFC107", "Eurpe" = "#1E88E5")) 
+
 
 # d.) Output long dataset and upload to github
 write.csv(long_dat, "/Users/jules/Desktop/long_dat.csv", row.names = FALSE)
 # Note: change working directory to your own
+
