@@ -125,11 +125,11 @@ years <- c("2000", "2000", "2000", # create year variable
            "2015", "2015", "2015",
            "2019", "2019", "2019") 
 
-cont_long <- c("Eurpe", "Africa", "Asia", # create continent variable (long format)
-               "Eurpe", "Africa", "Asia",
-               "Eurpe", "Africa", "Asia",
-               "Eurpe", "Africa", "Asia",
-               "Eurpe", "Africa", "Asia")
+cont_long <- c("Europe", "Africa", "Asia", # create continent variable (long format)
+               "Europe", "Africa", "Asia",
+               "Europe", "Africa", "Asia",
+               "Europe", "Africa", "Asia",
+               "Europe", "Africa", "Asia")
 
 alc_total <- c(avg_Eur2000, avg_Af2000, avg_As2000, # create alc consumption variable
                avg_Eur2005, avg_Af2005, avg_As2005, 
@@ -148,7 +148,7 @@ long_dat <- data.frame(
 # bar plot
 ggplot(long_dat, aes(x = Year, y = Alc, fill = Continent)) +
   geom_bar(stat = "identity", position = "dodge", alpha = 0.7) +  
-  scale_fill_manual(values = c("Africa" = "#D81B60", "Asia" = "#FFC107", "Eurpe" = "#1E88E5")) + 
+  scale_fill_manual(values = c("Africa" = "#D81B60", "Asia" = "#FFC107", "Europe" = "#1E88E5")) + 
   labs(title = "Average Alcohol Consumption by Continent From 2000-2019",
        x = "Year", y = "Average Alcohol Consumption (L)") +
   theme_minimal() 
@@ -161,7 +161,7 @@ ggplot(long_dat, aes(x = Year, y = Alc, linetype = Continent, color = Continent,
        x = "Year", y = "Alcohol Consumption (L)") +
   theme_minimal() +
   scale_y_continuous(breaks = seq(0, 20, by = 2), limits = c(0,12)) +
-  scale_color_manual(values = c("Africa" = "#D81B60", "Asia" = "#FFC107", "Eurpe" = "#1E88E5")) 
+  scale_color_manual(values = c("Africa" = "#D81B60", "Asia" = "#FFC107", "Europe" = "#1E88E5")) 
 
 
 # d.) Output long dataset and upload to github
