@@ -20,15 +20,15 @@ Python Packages used: pandas, numpy, matplotlib, seaborn, statsmodels, pmdarima,
 ***Platform***: 
 All members of this project used Mac as their platform. 
 
-### Section 2: Documentation Map 
-INSERT REPO TREE IMAGE HERE 
+### Section 2: Documentation Map
+![Project 2 GitHub Outline](https://github.com/user-attachments/assets/753d1c7f-67f7-429e-b677-6a3ab38e011f)
 
 ### Section 3: Reproduction Steps  
 
 ##### **1. Set Up the Environment and Load Dataset**  
 - Within the SCRIPTS folder, locate 'data_analysis.ipynb' to perform the analysis (the following instructions are performed with this script).
 - Install necessary Python libraries: pandas, numpy, matplotlib, seaborn, statsmodels, pmdarima, and sklearn.
-- The original data set can be downloaded from the UN Sustainable Goals Website:(https://unstats-undesa.opendata.arcgis.com/datasets/undesa::indicator-3-5-2-alcohol-consumption-per-capita-aged-15-years-and-older-within-a-calendar-year-litres-of-pure-alcohol/about). The dataset is called **Alcohol consumption per capita (aged 15 years and older) within a calendar year (litres of pure alcohol)**.
+- The original data set can be downloaded from the UN Sustainable Goals Website: (https://unstats-undesa.opendata.arcgis.com/datasets/undesa::indicator-3-5-2-alcohol-consumption-per-capita-aged-15-years-and-older-within-a-calendar-year-litres-of-pure-alcohol/about). The dataset is called **Alcohol consumption per capita (aged 15 years and older) within a calendar year (litres of pure alcohol)**.
 - To conduct the analysis, you will want to use a cleaned version of the dataset. Within the DATA folder, locate the 'long_dat.csv' dataset. This is the dataset that will be used to conduct the analysis. Load the dataset into your environment. 
 - Sort data by continent and year to ensure correct time series order.  
 
