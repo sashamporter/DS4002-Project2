@@ -3,7 +3,7 @@
 ## Repository Contents
 This repository contains the following contents:
 - ***SCRIPTS***: this folder contains all scripts used to clean our data, conduct our analysis, and generate visualizations.
-- ***DATA***: this folder contains our initial dataset (original_dat.csv) that sparked our interest as well as all the data used to complete our project.
+- ***DATA***: this folder contains our initial dataset (original_dat.csv) that sparked our interest as well as all the data used to complete our project. It also houses an appendix of our data and visualizations. 
 - ***OUTPUT***: this folder contains outputs produced from our analysis, such as tables and graphs. 
 
 ### Section 1: Software and platform section
@@ -21,8 +21,7 @@ Python Packages used: pandas, numpy, matplotlib, seaborn, statsmodels, pmdarima,
 All members of this project used Mac as their platform. 
 
 ### Section 2: Documentation Map
-![Project 2 GitHub Outline](https://github.com/user-attachments/assets/753d1c7f-67f7-429e-b677-6a3ab38e011f)
-
+![Project 2 GitHub Outline (1)](https://github.com/user-attachments/assets/9bd5a66a-3b7f-4ecd-99f3-9ad006825570)
 ### Section 3: Reproduction Steps  
 
 ##### **1. Set Up the Environment and Load Dataset**  
